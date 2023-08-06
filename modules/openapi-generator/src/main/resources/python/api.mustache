@@ -83,8 +83,24 @@ class {{classname}}(object):
 {{/asyncio}}
         return self.{{operationId}}_with_http_info({{#allParams}}{{paramName}}, {{/allParams}}**kwargs)  # noqa: E501
 
+{{#asyncio}}
+    @overload
+    async def {{operationId}}_with_http_info(self, {{#allParams}}{{paramName}} : {{{vendorExtensions.x-py-typing}}}{{^required}} = None{{/required}}, {{/allParams}}**kwargs) -> ApiResponse[{{{returnType}}}{{^returnType}}None{{/returnType}}]:  # noqa: E501
+        ...
+
+    @overload
+    def {{operationId}}_with_http_info(self, {{#allParams}}{{paramName}} : {{{vendorExtensions.x-py-typing}}}{{^required}} = None{{/required}}, {{/allParams}}async_req: Optional[bool]=True, **kwargs) -> ApiResponse[{{{returnType}}}{{^returnType}}None{{/returnType}}]:  # noqa: E501
+        ...
+
+{{/asyncio}}
+
+
+    @overload
+    def {{operationId}}_with_http_info(self, {{#allParams}}{{paramName}} : {{{vendorExtensions.x-py-typing}}}{{^required}} = None{{/required}}, {{/allParams}}_preload_content=False, {{#asyncio}}async_req: Optional[bool]=None, {{/asyncio}}**kwargs) -> {{#asyncio}}Union[ApiResponse[None], Awaitable[ApiResponse[None]]]{{/asyncio}}{{^asyncio}}ApiResponse[None]{{/asyncio}}:  # noqa: E501
+        ...
+
     @validate_arguments
-    def {{operationId}}_with_http_info(self, {{#allParams}}{{paramName}} : {{{vendorExtensions.x-py-typing}}}{{^required}} = None{{/required}}, {{/allParams}}**kwargs) -> ApiResponse:  # noqa: E501
+    def {{operationId}}_with_http_info(self, {{#allParams}}{{paramName}} : {{{vendorExtensions.x-py-typing}}}{{^required}} = None{{/required}}, {{/allParams}}{{#asyncio}}async_req: Optional[bool]=None, {{/asyncio}}**kwargs) -> {{#asyncio}}Union[ApiResponse[{{{returnType}}}{{^returnType}}None{{/returnType}}], Awaitable[ApiResponse[{{{returnType}}}{{^returnType}}None{{/returnType}}]]]{{/asyncio}}{{^asyncio}}ApiResponse[{{{returnType}}}{{^returnType}}None{{/returnType}}]{{/asyncio}}:  # noqa: E501
         """{{#isDeprecated}}(Deprecated) {{/isDeprecated}}{{{summary}}}{{^summary}}{{operationId}}{{/summary}}  # noqa: E501
 
 {{#notes}}
