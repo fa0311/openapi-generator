@@ -112,40 +112,40 @@ All URIs are relative to *http://localhost:3000*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*BodyApi* | [**TestBinaryGif**](docs/BodyApi.md#testbinarygif) | **POST** /binary/gif | Test binary (gif) response body
-*BodyApi* | [**TestBodyApplicationOctetstreamBinary**](docs/BodyApi.md#testbodyapplicationoctetstreambinary) | **POST** /body/application/octetstream/binary | Test body parameter(s)
-*BodyApi* | [**TestBodyMultipartFormdataArrayOfBinary**](docs/BodyApi.md#testbodymultipartformdataarrayofbinary) | **POST** /body/application/octetstream/array_of_binary | Test array of binary in multipart mime
-*BodyApi* | [**TestEchoBodyFreeFormObjectResponseString**](docs/BodyApi.md#testechobodyfreeformobjectresponsestring) | **POST** /echo/body/FreeFormObject/response_string | Test free form object
-*BodyApi* | [**TestEchoBodyPet**](docs/BodyApi.md#testechobodypet) | **POST** /echo/body/Pet | Test body parameter(s)
-*BodyApi* | [**TestEchoBodyPetResponseString**](docs/BodyApi.md#testechobodypetresponsestring) | **POST** /echo/body/Pet/response_string | Test empty response body
-*BodyApi* | [**TestEchoBodyTagResponseString**](docs/BodyApi.md#testechobodytagresponsestring) | **POST** /echo/body/Tag/response_string | Test empty json (request body)
-*FormApi* | [**TestFormIntegerBooleanString**](docs/FormApi.md#testformintegerbooleanstring) | **POST** /form/integer/boolean/string | Test form parameter(s)
-*HeaderApi* | [**TestHeaderIntegerBooleanString**](docs/HeaderApi.md#testheaderintegerbooleanstring) | **GET** /header/integer/boolean/string | Test header parameter(s)
-*PathApi* | [**TestsPathStringPathStringIntegerPathInteger**](docs/PathApi.md#testspathstringpathstringintegerpathinteger) | **GET** /path/string/{path_string}/integer/{path_integer} | Test path parameter(s)
-*QueryApi* | [**TestEnumRefString**](docs/QueryApi.md#testenumrefstring) | **GET** /query/enum_ref_string | Test query parameter(s)
-*QueryApi* | [**TestQueryDatetimeDateString**](docs/QueryApi.md#testquerydatetimedatestring) | **GET** /query/datetime/date/string | Test query parameter(s)
-*QueryApi* | [**TestQueryIntegerBooleanString**](docs/QueryApi.md#testqueryintegerbooleanstring) | **GET** /query/integer/boolean/string | Test query parameter(s)
-*QueryApi* | [**TestQueryStyleDeepObjectExplodeTrueObject**](docs/QueryApi.md#testquerystyledeepobjectexplodetrueobject) | **GET** /query/style_deepObject/explode_true/object | Test query parameter(s)
-*QueryApi* | [**TestQueryStyleDeepObjectExplodeTrueObjectAllOf**](docs/QueryApi.md#testquerystyledeepobjectexplodetrueobjectallof) | **GET** /query/style_deepObject/explode_true/object/allOf | Test query parameter(s)
-*QueryApi* | [**TestQueryStyleFormExplodeTrueArrayString**](docs/QueryApi.md#testquerystyleformexplodetruearraystring) | **GET** /query/style_form/explode_true/array_string | Test query parameter(s)
-*QueryApi* | [**TestQueryStyleFormExplodeTrueObject**](docs/QueryApi.md#testquerystyleformexplodetrueobject) | **GET** /query/style_form/explode_true/object | Test query parameter(s)
-*QueryApi* | [**TestQueryStyleFormExplodeTrueObjectAllOf**](docs/QueryApi.md#testquerystyleformexplodetrueobjectallof) | **GET** /query/style_form/explode_true/object/allOf | Test query parameter(s)
+*BodyApi* | [**TestBinaryGif**](docs\BodyApi.md#testbinarygif) | **POST** /binary/gif | Test binary (gif) response body
+*BodyApi* | [**TestBodyApplicationOctetstreamBinary**](docs\BodyApi.md#testbodyapplicationoctetstreambinary) | **POST** /body/application/octetstream/binary | Test body parameter(s)
+*BodyApi* | [**TestBodyMultipartFormdataArrayOfBinary**](docs\BodyApi.md#testbodymultipartformdataarrayofbinary) | **POST** /body/application/octetstream/array_of_binary | Test array of binary in multipart mime
+*BodyApi* | [**TestEchoBodyFreeFormObjectResponseString**](docs\BodyApi.md#testechobodyfreeformobjectresponsestring) | **POST** /echo/body/FreeFormObject/response_string | Test free form object
+*BodyApi* | [**TestEchoBodyPet**](docs\BodyApi.md#testechobodypet) | **POST** /echo/body/Pet | Test body parameter(s)
+*BodyApi* | [**TestEchoBodyPetResponseString**](docs\BodyApi.md#testechobodypetresponsestring) | **POST** /echo/body/Pet/response_string | Test empty response body
+*BodyApi* | [**TestEchoBodyTagResponseString**](docs\BodyApi.md#testechobodytagresponsestring) | **POST** /echo/body/Tag/response_string | Test empty json (request body)
+*FormApi* | [**TestFormIntegerBooleanString**](docs\FormApi.md#testformintegerbooleanstring) | **POST** /form/integer/boolean/string | Test form parameter(s)
+*HeaderApi* | [**TestHeaderIntegerBooleanString**](docs\HeaderApi.md#testheaderintegerbooleanstring) | **GET** /header/integer/boolean/string | Test header parameter(s)
+*PathApi* | [**TestsPathStringPathStringIntegerPathInteger**](docs\PathApi.md#testspathstringpathstringintegerpathinteger) | **GET** /path/string/{path_string}/integer/{path_integer} | Test path parameter(s)
+*QueryApi* | [**TestEnumRefString**](docs\QueryApi.md#testenumrefstring) | **GET** /query/enum_ref_string | Test query parameter(s)
+*QueryApi* | [**TestQueryDatetimeDateString**](docs\QueryApi.md#testquerydatetimedatestring) | **GET** /query/datetime/date/string | Test query parameter(s)
+*QueryApi* | [**TestQueryIntegerBooleanString**](docs\QueryApi.md#testqueryintegerbooleanstring) | **GET** /query/integer/boolean/string | Test query parameter(s)
+*QueryApi* | [**TestQueryStyleDeepObjectExplodeTrueObject**](docs\QueryApi.md#testquerystyledeepobjectexplodetrueobject) | **GET** /query/style_deepObject/explode_true/object | Test query parameter(s)
+*QueryApi* | [**TestQueryStyleDeepObjectExplodeTrueObjectAllOf**](docs\QueryApi.md#testquerystyledeepobjectexplodetrueobjectallof) | **GET** /query/style_deepObject/explode_true/object/allOf | Test query parameter(s)
+*QueryApi* | [**TestQueryStyleFormExplodeTrueArrayString**](docs\QueryApi.md#testquerystyleformexplodetruearraystring) | **GET** /query/style_form/explode_true/array_string | Test query parameter(s)
+*QueryApi* | [**TestQueryStyleFormExplodeTrueObject**](docs\QueryApi.md#testquerystyleformexplodetrueobject) | **GET** /query/style_form/explode_true/object | Test query parameter(s)
+*QueryApi* | [**TestQueryStyleFormExplodeTrueObjectAllOf**](docs\QueryApi.md#testquerystyleformexplodetrueobjectallof) | **GET** /query/style_form/explode_true/object/allOf | Test query parameter(s)
 
 
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
- - [Model.Bird](docs/Bird.md)
- - [Model.Category](docs/Category.md)
- - [Model.DataQuery](docs/DataQuery.md)
- - [Model.DefaultValue](docs/DefaultValue.md)
- - [Model.NumberPropertiesOnly](docs/NumberPropertiesOnly.md)
- - [Model.Pet](docs/Pet.md)
- - [Model.Query](docs/Query.md)
- - [Model.StringEnumRef](docs/StringEnumRef.md)
- - [Model.Tag](docs/Tag.md)
- - [Model.TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter](docs/TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter.md)
- - [Model.TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter](docs/TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter.md)
+ - [Model.Bird](docs\Bird.md)
+ - [Model.Category](docs\Category.md)
+ - [Model.DataQuery](docs\DataQuery.md)
+ - [Model.DefaultValue](docs\DefaultValue.md)
+ - [Model.NumberPropertiesOnly](docs\NumberPropertiesOnly.md)
+ - [Model.Pet](docs\Pet.md)
+ - [Model.Query](docs\Query.md)
+ - [Model.StringEnumRef](docs\StringEnumRef.md)
+ - [Model.Tag](docs\Tag.md)
+ - [Model.TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter](docs\TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter.md)
+ - [Model.TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter](docs\TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter.md)
 
 
 <a id="documentation-for-authorization"></a>

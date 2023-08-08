@@ -116,14 +116,14 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*FakeApi* | [**GetParameterNameMapping**](docs/FakeApi.md#getparameternamemapping) | **GET** /fake/parameter-name-mapping | parameter name mapping test
+*FakeApi* | [**GetParameterNameMapping**](docs\FakeApi.md#getparameternamemapping) | **GET** /fake/parameter-name-mapping | parameter name mapping test
 
 
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
- - [Model.Env](docs/Env.md)
- - [Model.PropertyNameMapping](docs/PropertyNameMapping.md)
+ - [Model.Env](docs\Env.md)
+ - [Model.PropertyNameMapping](docs\PropertyNameMapping.md)
 
 
 <a id="documentation-for-authorization"></a>
