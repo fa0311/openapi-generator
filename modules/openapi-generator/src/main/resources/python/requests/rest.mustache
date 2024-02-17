@@ -1,0 +1,118 @@
+# coding: utf-8
+
+{{>partial_header}}
+
+import io
+import json
+import re
+import ssl
+
+import requests
+
+from {{packageName}}.exceptions import ApiException, ApiValueError
+
+
+RESTResponseType = requests.models.Response
+
+
+class RESTResponse(io.IOBase):
+    def __init__(self, resp: RESTResponseType) -> None:
+        self.response = resp
+        self.status = resp.status_code
+        self.reason = resp.reason
+        self.data = None
+
+    def read(self):
+        if self.data is None:
+            self.data = self.response.content
+        return self.data
+
+    def getheaders(self):
+        """Returns a dictionary of the response headers."""
+        return self.response.headers
+
+    def getheader(self, name, default=None):
+        """Returns a given response header."""
+        return self.response.headers.get(name, default)
+
+
+class RESTClientObject:
+    def __init__(self, configuration) -> None:
+        pass
+
+    def request(
+        self,
+        method,
+        url,
+        headers=None,
+        body=None,
+        post_params=None,
+        _request_timeout=None,
+    ):
+        """Perform requests.
+
+        :param method: http request method
+        :param url: http request url
+        :param headers: http request headers
+        :param body: request json body, for `application/json`
+        :param post_params: request post parameters,
+                            `application/x-www-form-urlencoded`
+                            and `multipart/form-data`
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        """
+
+
+    def request(
+        self,
+        method,
+        url,
+        headers=None,
+        body=None,
+        post_params=None,
+        _request_timeout=None,
+    ):
+        """Perform requests.
+
+        :param method: http request method
+        :param url: http request url
+        :param headers: http request headers
+        :param body: request json body, for `application/json`
+        :param post_params: request post parameters,
+                            `application/x-www-form-urlencoded`
+                            and `multipart/form-data`
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        """
+
+        if headers.get("Content-Type") is None:
+            headers["Content-Type"] = "application/json"
+
+        method = method.upper()
+        assert method in ["GET", "HEAD", "DELETE", "POST", "PUT", "PATCH", "OPTIONS"]
+
+        print(f"Requesting {method} {url}")
+        print(f"Headers: {headers} {type(headers)}")
+        print(f"Body: {body} {type(body)}")
+        print(f"Post Params: {post_params} {type(post_params)}")
+
+        try:
+            r = requests.request(
+                method,
+                url,
+                headers=headers,
+                json=body,
+                files=post_params,
+                timeout=_request_timeout,
+                stream=True,
+            )
+
+        except requests.exceptions.RequestException as e:
+            msg = "\n".join([type(e).__name__, str(e)])
+            raise ApiException(status=0, reason=msg)
+
+        return RESTResponse(r)

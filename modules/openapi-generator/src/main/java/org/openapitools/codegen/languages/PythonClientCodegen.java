@@ -152,8 +152,9 @@ public class PythonClientCodegen extends AbstractPythonCodegen implements Codege
 
         supportedLibraries.put("urllib3", "urllib3-based client");
         supportedLibraries.put("asyncio", "asyncio-based client");
+        supportedLibraries.put("requests", "requests-based client");
         supportedLibraries.put("tornado", "tornado-based client (deprecated)");
-        CliOption libraryOption = new CliOption(CodegenConstants.LIBRARY, "library template (sub-template) to use: asyncio, tornado (deprecated), urllib3");
+        CliOption libraryOption = new CliOption(CodegenConstants.LIBRARY, "library template (sub-template) to use: asyncio, requests, tornado (deprecated), urllib3");
         libraryOption.setDefault(DEFAULT_LIBRARY);
         cliOptions.add(libraryOption);
         setLibrary(DEFAULT_LIBRARY);
@@ -324,6 +325,9 @@ public class PythonClientCodegen extends AbstractPythonCodegen implements Codege
         if ("asyncio".equals(getLibrary())) {
             supportingFiles.add(new SupportingFile("asyncio/rest.mustache", packagePath(), "rest.py"));
             additionalProperties.put("asyncio", "true");
+        } else if ("requests".equals(getLibrary())) {
+            supportingFiles.add(new SupportingFile("requests/rest.mustache", packagePath(), "rest.py"));
+            additionalProperties.put("requests", "true");
         } else if ("tornado".equals(getLibrary())) {
             supportingFiles.add(new SupportingFile("tornado/rest.mustache", packagePath(), "rest.py"));
             additionalProperties.put("tornado", "true");
